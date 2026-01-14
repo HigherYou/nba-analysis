@@ -24,7 +24,7 @@
         
         <view class="teams-row">
           <view class="team-info">
-            <image class="team-logo" src="{{item.home_team.logo || '/assets/images/nba_logo.png'}}"></image>
+            <image class="team-logo" src="{{item.home_team.logo || '/assets/images/nba_logo.svg'}}"></image>
             <text class="team-name">{{item.home_team.name}}</text>
             <text class="team-score {{item.home_team.win ? 'winner' : ''}}">{{item.home_team.score}}</text>
           </view>
@@ -32,7 +32,7 @@
           <view class="vs-divider">VS</view>
           
           <view class="team-info">
-            <image class="team-logo" src="{{item.away_team.logo || '/assets/images/nba_logo.png'}}"></image>
+            <image class="team-logo" src="{{item.away_team.logo || '/assets/images/nba_logo.svg'}}"></image>
             <text class="team-name">{{item.away_team.name}}</text>
             <text class="team-score {{item.away_team.win ? 'winner' : ''}}">{{item.away_team.score}}</text>
           </view>

@@ -35,16 +35,16 @@ Page({
                 gameId: "001",
                 status: "Live",
                 period: { current: 4, clock: "02:35" },
-                home_team: { name: "Lakers", score: 115, win: true },
-                away_team: { name: "Warriors", score: 109, win: false },
+                home_team: { name: "Lakers", score: 115, win: true, logo: 'https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg' },
+                away_team: { name: "Warriors", score: 109, win: false, logo: '/assets/images/nba_logo.svg' },
                 broadcasters: "ESPN"
             },
             {
                 gameId: "002",
                 status: "Final",
                 period: { current: 4, clock: "00:00" },
-                home_team: { name: "Celtics", score: 120, win: true },
-                away_team: { name: "Bucks", score: 105, win: false }
+                home_team: { name: "Celtics", score: 120, win: true, logo: '/assets/images/nba_logo.svg' },
+                away_team: { name: "Bucks", score: 105, win: false, logo: '/assets/images/nba_logo.svg' }
             }
         ];
       }
@@ -59,8 +59,8 @@ Page({
             gameId: "001",
             status: "Live",
             period: { current: 4, clock: "02:35" },
-            home_team: { name: "Lakers", score: 115, win: true },
-            away_team: { name: "Warriors", score: 109, win: false },
+            home_team: { name: "Lakers", score: 115, win: true, logo: 'https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg' },
+            away_team: { name: "Warriors", score: 109, win: false, logo: 'https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg' },
             broadcasters: "ESPN"
         }
       ];
