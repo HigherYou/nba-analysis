@@ -1,0 +1,1 @@
+Please download the latest `ec-canvas` component from [ECharts-for-Weixin](https://github.com/ecomfe/echarts-for-weixin) and place the files (ec-canvas.js, ec-canvas.wxml, ec-canvas.wxss, echarts.js, etc.) in this directory.

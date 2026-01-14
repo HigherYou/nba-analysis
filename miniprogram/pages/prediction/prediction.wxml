@@ -1,0 +1,55 @@
+<view class="container">
+  <!-- 胜率预测 -->
+  <view class="section-title">明日比赛胜率预测</view>
+  <block wx:for="{{games}}" wx:key="id">
+    <view class="predict-card">
+      <view class="game-info">
+        <text class="game-time">{{item.time}}</text>
+        <text class="game-type">{{item.type}}</text>
+      </view>
+      
+      <view class="matchup-row">
+        <view class="team-p">
+          <image class="p-logo" src="{{item.home.logo}}"></image>
+          <text class="p-name">{{item.home.name}}</text>
+        </view>
+        <view class="vs-text">VS</view>
+        <view class="team-p">
+          <image class="p-logo" src="{{item.away.logo}}"></image>
+          <text class="p-name">{{item.away.name}}</text>
+        </view>
+      </view>
+
+      <!-- 胜率条 -->
+      <view class="prob-bar-container">
+        <view class="prob-bar home" style="width: {{item.home_prob}}%">
+          <text class="prob-text-l">{{item.home_prob}}%</text>
+        </view>
+        <view class="prob-bar away" style="width: {{100 - item.home_prob}}%">
+          <text class="prob-text-r">{{100 - item.home_prob}}%</text>
+        </view>
+      </view>
+      
+      <view class="prob-desc">
+        <text>基于近10场战绩 & 主客场表现</text>
+      </view>
+    </view>
+  </block>
+
+  <!-- 球员里程碑预测 -->
+  <view class="section-title">球员里程碑概率</view>
+  <view class="prop-list">
+    <block wx:for="{{props}}" wx:key="id">
+      <view class="prop-card">
+        <image class="prop-avatar" src="{{item.headshot}}"></image>
+        <view class="prop-content">
+          <text class="prop-title">{{item.player}}</text>
+          <text class="prop-desc">{{item.condition}}</text>
+          <view class="prop-badge {{item.prob > 70 ? 'high' : 'med'}}">
+            概率: {{item.prob}}%
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

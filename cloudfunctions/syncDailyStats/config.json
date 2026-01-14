@@ -1,0 +1,9 @@
+{
+  "triggers": [
+    {
+      "name": "daily_stats_calc",
+      "type": "timer",
+      "config": "0 0 4 * * * *"
+    }
+  ]
+}

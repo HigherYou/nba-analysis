@@ -1,0 +1,51 @@
+page {
+  /* --- 核心色板 --- */
+  --bg-color: #121212;          /* 页面深黑背景 */
+  --card-bg: #1E1E1E;           /* 卡片深灰背景 */
+  --text-primary: #FFFFFF;      /* 主要文字 */
+  --text-secondary: #B0B0B0;    /* 次要文字 */
+  --text-muted: #666666;        /* 弱化文字 */
+  
+  /* --- NBA 品牌色 & 功能色 --- */
+  --nba-red: #C9082A;           /* 强调色/热区 */
+  --nba-blue: #17408B;          /* 辅助色/冷区 */
+  --success: #00BFA5;           /* 正向数据 (如命中率高) */
+  --danger: #FF5252;            /* 负向数据 (如失误多) */
+  --warning: #FFD740;           /* 中立/警告 */
+
+  /* --- 布局间距 --- */
+  --spacing-xs: 8rpx;
+  --spacing-sm: 16rpx;
+  --spacing-md: 24rpx;
+  --spacing-lg: 32rpx;
+
+  /* --- 全局默认样式 --- */
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+
+/* 通用容器 */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* 通用卡片样式 */
+.card {
+  background: var(--card-bg);
+  border-radius: 12rpx;
+  padding: var(--spacing-md);
+  margin: var(--spacing-md);
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.3);
+}
+
+/* 辅助类：Flex布局 */
+.flex-row { display: flex; flex-direction: row; align-items: center; }
+.flex-col { display: flex; flex-direction: column; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
+.space-between { justify-content: space-between; }

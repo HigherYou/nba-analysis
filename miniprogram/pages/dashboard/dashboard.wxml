@@ -1,0 +1,36 @@
+<view class="container">
+  <!-- 顶部切换栏 -->
+  <view class="tab-header">
+    <view class="tab-item {{currentTab==='team' ? 'active' : ''}}" bindtap="switchTab" data-tab="team">球队分析</view>
+    <view class="tab-item {{currentTab==='player' ? 'active' : ''}}" bindtap="switchTab" data-tab="player">球员高阶</view>
+  </view>
+
+  <!-- 球队维度：四象限散点图 -->
+  <view class="chart-section" wx:if="{{currentTab === 'team'}}">
+    <view class="section-title">联盟攻防效率分布</view>
+    <view class="chart-container">
+      <ec-canvas id="team-scatter" canvas-id="team-scatter" ec="{{ ecScatter }}"></ec-canvas>
+    </view>
+    <view class="chart-desc">
+      <text class="highlight">右上角</text> 为攻防兼备强队 (如凯尔特人)
+    </view>
+  </view>
+
+  <!-- 球员维度：高阶数据Top5 -->
+  <view class="data-list" wx:if="{{currentTab === 'player'}}">
+    <view class="section-title">真实命中率 (TS%) Top 5</view>
+    <block wx:for="{{topPlayers}}" wx:key="id">
+      <view class="player-card" bindtap="goToDetail" data-id="{{item.id}}">
+        <image class="avatar" src="{{item.headshot_url}}" mode="aspectFill"></image>
+        <view class="info">
+          <text class="name">{{item.name_cn}}</text>
+          <text class="team">{{item.team_name}}</text>
+        </view>
+        <view class="stat-box">
+          <text class="stat-value highlight">{{item.ts_pct}}%</text>
+          <text class="stat-label">TS%</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

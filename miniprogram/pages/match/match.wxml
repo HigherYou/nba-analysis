@@ -1,0 +1,47 @@
+<view class="container">
+  <!-- 日期切换 -->
+  <view class="date-header">
+    <view class="date-item" bindtap="switchDate" data-offset="-1">
+      <text class="day-label">Yesterday</text>
+    </view>
+    <view class="date-item active">
+      <text class="day-label">Today</text>
+      <text class="full-date">{{todayDate}}</text>
+    </view>
+    <view class="date-item" bindtap="switchDate" data-offset="1">
+      <text class="day-label">Tomorrow</text>
+    </view>
+  </view>
+
+  <!-- 比赛列表 -->
+  <scroll-view scroll-y class="match-list" refresher-enabled bindrefresherrefresh="onRefresh" refresher-triggered="{{triggered}}">
+    <block wx:for="{{matches}}" wx:key="gameId">
+      <view class="match-card" bindtap="goToDetail" data-id="{{item.gameId}}">
+        <view class="status-bar">
+          <text class="status-text {{item.status === 'Live' ? 'live' : ''}}">{{item.status === 'Live' ? 'LIVE Q' + item.period.current + ' ' + item.period.clock : item.status}}</text>
+          <text class="broadcaster" wx:if="{{item.broadcasters}}">{{item.broadcasters}}</text>
+        </view>
+        
+        <view class="teams-row">
+          <view class="team-info">
+            <image class="team-logo" src="{{item.home_team.logo || '/assets/images/nba_logo.png'}}"></image>
+            <text class="team-name">{{item.home_team.name}}</text>
+            <text class="team-score {{item.home_team.win ? 'winner' : ''}}">{{item.home_team.score}}</text>
+          </view>
+          
+          <view class="vs-divider">VS</view>
+          
+          <view class="team-info">
+            <image class="team-logo" src="{{item.away_team.logo || '/assets/images/nba_logo.png'}}"></image>
+            <text class="team-name">{{item.away_team.name}}</text>
+            <text class="team-score {{item.away_team.win ? 'winner' : ''}}">{{item.away_team.score}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+    
+    <view wx:if="{{matches.length === 0}}" class="empty-state">
+      <text>No games scheduled for today.</text>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,152 @@
+.team-header {
+  background: linear-gradient(135deg, #1E1E1E 0%, #333 100%);
+  padding: 40rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #333;
+}
+
+.team-logo-lg {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 30rpx;
+}
+
+.team-info-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-name-lg {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.team-record {
+  font-size: 24rpx;
+  color: var(--text-secondary);
+  margin-top: 8rpx;
+}
+
+.win-rate-circle {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 4rpx solid var(--nba-red);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rate-val {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.rate-label {
+  font-size: 18rpx;
+  color: var(--text-muted);
+}
+
+.section {
+  padding: var(--spacing-md);
+  background: var(--card-bg);
+  margin-top: var(--spacing-md);
+}
+
+.stats-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20rpx;
+}
+
+.stat-box {
+  background: #252525;
+  padding: 20rpx 10rpx;
+  border-radius: 8rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-box.positive { border-bottom: 4rpx solid var(--success); }
+.stat-box.negative { border-bottom: 4rpx solid var(--danger); }
+
+.lineup-card {
+  background: #252525;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lineup-players {
+  display: flex;
+}
+
+.lineup-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 16rpx;
+  width: 60rpx;
+}
+
+.sm-avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background: #444;
+  margin-bottom: 8rpx;
+}
+
+.sm-name {
+  font-size: 16rpx;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  text-align: center;
+}
+
+.lineup-stats {
+  text-align: right;
+  min-width: 100rpx;
+}
+
+.l-stat {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8rpx;
+}
+
+.l-val { font-size: 28rpx; font-weight: bold; }
+.l-label { font-size: 18rpx; color: var(--text-muted); }
+
+.roster-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #333;
+}
+
+.roster-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  background: #333;
+}
+
+.roster-info { flex: 1; display: flex; flex-direction: column; }
+.r-name { font-size: 28rpx; color: var(--text-primary); }
+.r-meta { font-size: 22rpx; color: var(--text-muted); }
+
+.roster-stat { text-align: right; }
+.r-val { font-size: 32rpx; font-weight: bold; }
+.r-label { font-size: 18rpx; color: var(--text-muted); }

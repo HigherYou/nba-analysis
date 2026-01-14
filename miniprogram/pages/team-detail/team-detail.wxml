@@ -1,0 +1,80 @@
+<view class="container">
+  <!-- 球队头部 -->
+  <view class="team-header">
+    <image class="team-logo-lg" src="{{team.logo}}" mode="aspectFit"></image>
+    <view class="team-info-main">
+      <text class="team-name-lg">{{team.name_cn}}</text>
+      <text class="team-record">{{team.record}} | {{team.conference}} #{{team.rank}}</text>
+    </view>
+    <view class="win-rate-circle">
+      <text class="rate-val">{{team.win_pct}}%</text>
+      <text class="rate-label">胜率</text>
+    </view>
+  </view>
+
+  <!-- 赛季数据概览 -->
+  <view class="section">
+    <view class="section-title">赛季表现</view>
+    <view class="stats-grid-4">
+      <view class="stat-box">
+        <text class="val">{{team.stats.off_rtg}}</text>
+        <text class="label">进攻效率</text>
+      </view>
+      <view class="stat-box">
+        <text class="val">{{team.stats.def_rtg}}</text>
+        <text class="label">防守效率</text>
+      </view>
+      <view class="stat-box {{team.stats.net_rtg > 0 ? 'positive' : 'negative'}}">
+        <text class="val">{{team.stats.net_rtg}}</text>
+        <text class="label">净效率</text>
+      </view>
+      <view class="stat-box">
+        <text class="val">{{team.stats.pace}}</text>
+        <text class="label">节奏</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 最强阵容分析 -->
+  <view class="section">
+    <view class="section-title">最强5人组 (Min > 50)</view>
+    <view class="lineup-card">
+      <view class="lineup-players">
+        <block wx:for="{{team.best_lineup.players}}" wx:key="*this">
+          <view class="lineup-player">
+            <image class="sm-avatar" src="{{item.headshot}}"></image>
+            <text class="sm-name">{{item.name}}</text>
+          </view>
+        </block>
+      </view>
+      <view class="lineup-stats">
+        <view class="l-stat">
+          <text class="l-val highlight">{{team.best_lineup.net_rtg}}</text>
+          <text class="l-label">净效率</text>
+        </view>
+        <view class="l-stat">
+          <text class="l-val">{{team.best_lineup.min}}</text>
+          <text class="l-label">分钟</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 球员列表 -->
+  <view class="section">
+    <view class="section-title">球队阵容</view>
+    <block wx:for="{{team.roster}}" wx:key="id">
+      <view class="roster-item" bindtap="goToPlayer" data-id="{{item.id}}">
+        <image class="roster-avatar" src="{{item.headshot}}"></image>
+        <view class="roster-info">
+          <text class="r-name">{{item.name}}</text>
+          <text class="r-meta">#{{item.jersey}} | {{item.position}}</text>
+        </view>
+        <view class="roster-stat">
+          <text class="r-val">{{item.pts_pg}}</text>
+          <text class="r-label">PPG</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

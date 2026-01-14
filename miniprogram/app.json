@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/match/match",
+    "pages/dashboard/dashboard",
+    "pages/rank/rank",
+    "pages/prediction/prediction",
+    "pages/match-detail/match-detail",
+    "pages/player-detail/player-detail",
+    "pages/team-detail/team-detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#121212",
+    "navigationBarTitleText": "NBA Analytics",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#121212"
+  },
+  "tabBar": {
+    "color": "#888888",
+    "selectedColor": "#C9082A", 
+    "backgroundColor": "#1E1E1E",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/match/match",
+        "text": "赛程",
+        "iconPath": "assets/images/tab_match.png",
+        "selectedIconPath": "assets/images/tab_match_active.png"
+      },
+      {
+        "pagePath": "pages/dashboard/dashboard",
+        "text": "看板",
+        "iconPath": "assets/images/tab_data.png",
+        "selectedIconPath": "assets/images/tab_data_active.png"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "text": "榜单",
+        "iconPath": "assets/images/tab_rank.png",
+        "selectedIconPath": "assets/images/tab_rank_active.png"
+      },
+      {
+        "pagePath": "pages/prediction/prediction",
+        "text": "预测",
+        "iconPath": "assets/images/tab_predict.png",
+        "selectedIconPath": "assets/images/tab_predict_active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

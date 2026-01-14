@@ -1,0 +1,43 @@
+<view class="container">
+  <!-- 头部信息 -->
+  <view class="header-card">
+    <image class="big-avatar" src="{{player.headshot_url}}" mode="aspectFill"></image>
+    <view class="basic-info">
+      <text class="player-name">{{player.name_cn}}</text>
+      <text class="player-meta">#{{player.jersey}} | {{player.position}} | {{player.team_name}}</text>
+    </view>
+  </view>
+
+  <!-- 能力雷达图 -->
+  <view class="chart-container-square">
+    <ec-canvas id="ability-radar" canvas-id="ability-radar" ec="{{ ecRadar }}"></ec-canvas>
+  </view>
+
+  <!-- 赛季数据网格 -->
+  <view class="stats-grid">
+    <view class="stat-item">
+      <text class="val">{{player.stats.pts_pg}}</text>
+      <text class="label">得分</text>
+    </view>
+    <view class="stat-item">
+      <text class="val">{{player.stats.reb_pg}}</text>
+      <text class="label">篮板</text>
+    </view>
+    <view class="stat-item">
+      <text class="val">{{player.stats.ast_pg}}</text>
+      <text class="label">助攻</text>
+    </view>
+    <view class="stat-item highlight-box">
+      <text class="val">{{player.stats.per}}</text>
+      <text class="label">PER效率值</text>
+    </view>
+    <view class="stat-item highlight-box">
+      <text class="val">{{player.stats.ts_pct}}%</text>
+      <text class="label">真实命中率</text>
+    </view>
+    <view class="stat-item highlight-box">
+      <text class="val">{{player.stats.usg_pct}}%</text>
+      <text class="label">使用率</text>
+    </view>
+  </view>
+</view>

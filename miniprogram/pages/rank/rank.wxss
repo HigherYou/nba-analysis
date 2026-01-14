@@ -1,0 +1,94 @@
+.container {
+  flex-direction: row;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 180rpx;
+  background: #1A1A1A;
+  height: 100%;
+  border-right: 1rpx solid #333;
+}
+
+.sidebar-item {
+  padding: 30rpx 20rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: var(--text-secondary);
+  border-left: 6rpx solid transparent;
+}
+
+.sidebar-item.active {
+  background: #252525;
+  color: var(--nba-red);
+  font-weight: bold;
+  border-left-color: var(--nba-red);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-color);
+}
+
+.header-row {
+  display: flex;
+  padding: 20rpx 30rpx;
+  background: var(--card-bg);
+  font-size: 24rpx;
+  color: var(--text-muted);
+  border-bottom: 1rpx solid #333;
+}
+
+.th-rank { width: 60rpx; text-align: center; }
+.th-player { flex: 1; padding-left: 20rpx; }
+.th-val { width: 100rpx; text-align: right; }
+
+.rank-list {
+  flex: 1;
+}
+
+.rank-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid #252525;
+}
+
+.rank-num {
+  width: 60rpx;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+
+.rank-num.top3 {
+  color: var(--nba-red); /* Gold color or just Red highlight */
+}
+
+.rank-avatar {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  background: #333;
+  margin: 0 20rpx;
+}
+
+.rank-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.p-name { font-size: 28rpx; color: var(--text-primary); }
+.p-team { font-size: 22rpx; color: var(--text-muted); }
+
+.rank-val {
+  width: 100rpx;
+  text-align: right;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: var(--text-primary);
+}

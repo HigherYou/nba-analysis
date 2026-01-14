@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "openapi": []
+  },
+  "triggers": [
+    {
+      "name": "live_score_refresh",
+      "type": "timer",
+      "config": "0 */1 7-14 * * * *"
+    }
+  ]
+}

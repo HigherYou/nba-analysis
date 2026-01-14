@@ -1,0 +1,36 @@
+<view class="container">
+  <!-- 侧边分类栏 -->
+  <scroll-view scroll-y class="sidebar">
+    <block wx:for="{{categories}}" wx:key="key">
+      <view class="sidebar-item {{currentCat === item.key ? 'active' : ''}}" bindtap="switchCategory" data-key="{{item.key}}">
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- 右侧榜单内容 -->
+  <view class="main-content">
+    <view class="header-row">
+      <text class="th-rank">Rank</text>
+      <text class="th-player">Player</text>
+      <text class="th-val">{{currentCatName}}</text>
+    </view>
+
+    <scroll-view scroll-y class="rank-list" refresher-enabled bindrefresherrefresh="onRefresh" refresher-triggered="{{triggered}}">
+      <block wx:for="{{rankList}}" wx:key="id">
+        <view class="rank-item" bindtap="goToPlayer" data-id="{{item.id}}">
+          <view class="rank-num {{index < 3 ? 'top3' : ''}}">{{index + 1}}</view>
+          
+          <image class="rank-avatar" src="{{item.headshot}}"></image>
+          
+          <view class="rank-info">
+            <text class="p-name">{{item.name}}</text>
+            <text class="p-team">{{item.team}}</text>
+          </view>
+          
+          <text class="rank-val">{{item.value}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
