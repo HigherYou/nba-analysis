@@ -101,13 +101,13 @@ git clone https://github.com/your-username/nba-analysis.git
 
 ## 🎨 截图预览
 
-| 赛程首页 | 数据看板 | 球员详情 |
+| 赛程首页 | 球员详情 |
 |:---:|:---:|:---:|
-| *(image.png)* | *(在此处插入 dashboard.png)* | *(在此处插入 player.png)* |
+| *(miniprogram\assets\images\first.png)* | *(miniprogram\assets\images\detail.png)* | 
 
 | 高阶榜单 | 比赛预测 |
 |:---:|:---:|
-| *(在此处插入 rank.png)* | *(在此处插入 predict.png)* |
+| *(miniprogram\assets\images\high_levl.png)* | *(miniprogram\assets\images\predict.png)* |
 
 ---
 
