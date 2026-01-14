@@ -102,12 +102,12 @@ git clone https://github.com/your-username/nba-analysis.git
 ## 🎨 截图预览
 
 | 赛程首页 | 球员详情 |
-|:---:|:---:|:---:|
-| *(miniprogram\assets\images\first.png)* | *(miniprogram\assets\images\detail.png)* | 
+|:---:|:---:|
+| *(miniprogram/assets/images/first.png)* | *(miniprogram/assets/images/detail.png)* | 
 
 | 高阶榜单 | 比赛预测 |
 |:---:|:---:|
-| *(miniprogram\assets\images\high_levl.png)* | *(miniprogram\assets\images\predict.png)* |
+| *(miniprogram/assets/images/high_levl.png)* | *(miniprogram/assets/images/predict.png)* |
 
 ---
 
