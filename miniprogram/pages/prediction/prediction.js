@@ -28,6 +28,14 @@ Page({
             home: { name: 'LAL', logo: 'https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg' },
             away: { name: 'GSW', logo: 'https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg' },
             home_prob: 52
+          },
+          {
+            id: 3,
+            time: '明天 10:00',
+            type: '西部强强对话',
+            home: { name: 'DEN', logo: 'https://cdn.nba.com/logos/nba/1610612743/primary/L/logo.svg' },
+            away: { name: 'MIN', logo: 'https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg' },
+            home_prob: 55
           }
         ],
         props: [
@@ -44,6 +52,13 @@ Page({
             headshot: 'https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png',
             condition: '三分命中 > 4.5', 
             prob: 62 
+          },
+          { 
+            id: 103, 
+            player: 'Luka Doncic', 
+            headshot: 'https://cdn.nba.com/headshots/nba/latest/1040x760/1629029.png',
+            condition: '三双', 
+            prob: 45 
           }
         ]
       });

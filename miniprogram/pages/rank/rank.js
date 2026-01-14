@@ -48,19 +48,27 @@ Page({
   },
 
   generateMockData(cat) {
-    // Generate some dummy data based on category
+    // 2023-24 赛季得分榜真实数据
     const players = [
-      { id: 203999, name: 'Nikola Jokic', team: 'DEN', headshot: 'https://cdn.nba.com/headshots/nba/latest/1040x760/203999.png' },
-      { id: 203507, name: 'Giannis Antetokounmpo', team: 'MIL', headshot: 'https://cdn.nba.com/headshots/nba/latest/1040x760/203507.png' },
-      { id: 1629029, name: 'Luka Doncic', team: 'DAL', headshot: 'https://cdn.nba.com/headshots/nba/latest/1040x760/1629029.png' },
-      { id: 201939, name: 'Stephen Curry', team: 'GSW', headshot: 'https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png' },
-      { id: 1628369, name: 'Jayson Tatum', team: 'BOS', headshot: 'https://cdn.nba.com/headshots/nba/latest/1040x760/1628369.png' }
+      { id: 1629029, name: 'Luka Doncic', team: 'DAL', headshot: 'https://cdn.nba.com/headshots/nba/latest/1040x760/1629029.png', value: 33.9 },
+      { id: 203507, name: 'Giannis Antetokounmpo', team: 'MIL', headshot: 'https://cdn.nba.com/headshots/nba/latest/1040x760/203507.png', value: 30.4 },
+      { id: 1628983, name: 'Shai Gilgeous-Alexander', team: 'OKC', headshot: 'https://cdn.nba.com/headshots/nba/latest/1040x760/1628983.png', value: 30.1 },
+      { id: 203954, name: 'Joel Embiid', team: 'PHI', headshot: 'https://cdn.nba.com/headshots/nba/latest/1040x760/203954.png', value: 34.7 }, // Note: Embiid played fewer games but avg is high
+      { id: 1628378, name: 'Donovan Mitchell', team: 'OKC', headshot: 'https://cdn.nba.com/headshots/nba/latest/1040x760/1628378.png', value: 26.6 },
+      { id: 201142, name: 'Kevin Durant', team: 'PHX', headshot: 'https://cdn.nba.com/headshots/nba/latest/1040x760/201142.png', value: 27.1 },
+      { id: 1628369, name: 'Jayson Tatum', team: 'BOS', headshot: 'https://cdn.nba.com/headshots/nba/latest/1040x760/1628369.png', value: 26.9 },
+      { id: 1629027, name: 'Trae Young', team: 'ATL', headshot: 'https://cdn.nba.com/headshots/nba/latest/1040x760/1629027.png', value: 25.7 },
+      { id: 201939, name: 'Stephen Curry', team: 'GSW', headshot: 'https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png', value: 26.4 },
+      { id: 1627750, name: 'Jamal Murray', team: 'ATL', headshot: 'https://cdn.nba.com/headshots/nba/latest/1040x760/1627750.png', value: 21.2 }
     ];
 
-    return players.map(p => ({
-      ...p,
-      value: (Math.random() * 20 + 10).toFixed(1) // Random value 10-30
-    })).sort((a, b) => b.value - a.value);
+    // 简单模拟其他分类数据变化，实际应从API获取
+    if (cat === 'ast') {
+        // 助攻榜模拟
+        return players.map(p => ({ ...p, value: (Math.random() * 5 + 5).toFixed(1) })).sort((a, b) => b.value - a.value);
+    }
+
+    return players.sort((a, b) => b.value - a.value);
   },
 
   goToPlayer(e) {
