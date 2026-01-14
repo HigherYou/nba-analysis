@@ -107,7 +107,7 @@ git clone https://github.com/your-username/nba-analysis.git
 
 | 高阶榜单 | 比赛预测 |
 |:---:|:---:|
-| *![高阶榜单](miniprogram/assets/images/high_levl.png)* | *![比赛预测](miniprogram/assets/images/predict.png)* |
+| *![高阶榜单](miniprogram/assets/images/high_level.png)* | *![比赛预测](miniprogram/assets/images/predict.png)* |
 
 ---
 
